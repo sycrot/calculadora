@@ -5,47 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <title>Calculadora - Javascript</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     </head>
-    <body onload="inicializa();">
+    <body>
 
-            <form id="calculadora">
-                <input type="text" id="display" value="0"/>
-                <div>
-                    <input type="button" id="btnClear" value="C" onclick="btnClick(this);"/>
-                    <input type="button" value=" "/>
-                    <input type="button" value=" "/>
-                    <input type="button" id="btnMult" value="X" onclick="btnClick(this)"/>
-                </div>
+        <div class="containe">
+            <div id="display">
+                <h1 id="data"></h1>
+                
+                <h1 id="hora"></h1>
+               
+                <h1 id="conta"></h1>
+            </div>
 
-                <div>
-                <input type="button" id="btn7" value="7" onclick="btnClick(this);"/>
-                <input type="button" id="btn8" value="8" onclick="btnClick(this);"/>
-                <input type="button" id="btn9" value="9" onclick="btnClick(this);"/>
-                <input type="button" id="btnDiv" onclick="btnClick(this);" value="/"/>
-                </div>
+                <div id="buttons">
+                
+                <input type="button" class="btn" id="btnClear" value="AC"/>
+                <input type="button" class="btn" id="" value="CE"/>
+                <input type="button" class="btn" id="porcento" value="%"/>
+                <input type="button" class="btnOp" id="btnMult" value="X"/></br>
 
-                <div>
-                <input type="button" id="btn4" value="4" onclick="btnClick(this);"/>
-                <input type="button" id="btn5" value="5" onclick="btnClick(this);"/>
-                <input type="button" id="btn6" value="6" onclick="btnClick(this);" />
-                <input type="button" id="btnSoma" onclick="btnClick(this);" value="+"/>
-                </div>
+                
+                <input type="button" class="btn" id="btn7" value="7"/>
+                <input type="button" class="btn" id="btn8" value="8"/>
+                <input type="button" class="btn" id="btn9" value="9"/>
+                <input type="button" class="btnOp" id="btnDiv" value="/"/></br>
+                
 
-                <div>
-                <input type="button" id="btn1" value="1" onclick="btnClick(this);"/>
-                <input type="button" id="btn2" value="2" onclick="btnClick(this);"/>
-                <input type="button" id="btn3" value="3" onclick="btnClick(this);"/>
-                <input type="button" id="btnSub" onclick="btnClick(this);" value="-"/>
-                </div>
+                
+                <input type="button" class="btn" id="btn4" value="4"/>
+                <input type="button" class="btn" id="btn5" value="5"/>
+                <input type="button" class="btn" id="btn6" value="6" />
+                <input type="button" class="btnOp" id="btnSoma" value="+"/></br>
+                
 
-                <div>
-                <input type="button" id="pt" value="." onclick="btnClick(this);"/>
-                <input type="button" id="btn0" value="0" onclick="btnClick(this);"/>
-                <input type="button" id="virg" value="," onclick="btnClick(this);"/>
-                <input type="button" onclick="btnClick(this);" value="="/>
-                </div>
-            </form>
-        <script type="text/javascript" src="Javascript/calculadora.js"></script>
+                
+                <input type="button" class="btn" id="btn1" value="1"/>
+                <input type="button" class="btn" id="btn2" value="2"/>
+                <input type="button" class="btn" id="btn3" value="3"/>
+                <input type="button" class="btnOp" id="btnSub" value="-"/></br>
+                
+
+                
+                <input type="button" class="btnOp" id="ponto" value="." />
+                <input type="button" id="btn0" class="btn" value="0" />
+                <input type="button" class="btnOp" id="virg" value="," />
+                <input type="button" class="btnOp" value="="/></br>
+            
+            </div>
+                
+        
+        </div>
+
+        <script src="controller/calcController.js"></script>
+        <script type="text/javascript" src="assets/js/calculator.js"></script>
     </body>
 </html>
